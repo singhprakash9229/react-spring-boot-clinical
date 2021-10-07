@@ -8,7 +8,7 @@ class DisplayPatients extends React.Component{
     }
 
     componentWillMount(){
-         axios.get('http://localhost:8080/api/patients?firstName='+this.props.match.params.firstName+
+         axios.get('https://react-spring-boot-clinical.herokuapp.com/api/patients?firstName='+this.props.match.params.firstName+
         '&lastName='+this.props.match.params.lastName).then(res=>{
             const patientData = res.data;
             this.setState({patientData})

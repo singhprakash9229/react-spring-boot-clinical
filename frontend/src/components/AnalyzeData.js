@@ -13,7 +13,7 @@ class AnalyzeData extends React.Component{
    
     componentWillMount(){
 
-         axios.get('http://localhost:8080/api/patients/analyze/'
+         axios.get('https://react-spring-boot-clinical.herokuapp.com/api/patients/analyze/'
          +this.props.match.params.patientId).then(res=>{
              console.log(res.data)
             this.setState(res.data)

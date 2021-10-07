@@ -13,7 +13,7 @@ class AddPatient extends React.Component{
             age:this.age
         }
         console.log(data);
-        axios.post("http://localhost:8080/api/patients",data)
+        axios.post("https://react-spring-boot-clinical.herokuapp.com/api/patients",data)
         .then(res=>{
           //  document.write("Patient Created Successfully!!");
         })

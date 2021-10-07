@@ -21,7 +21,7 @@ class CollectClinicals extends React.Component{
             componentName:this.componentName,
             componentValue:this.componentValue,
         }
-        axios.post("http://localhost:8080/api/clinicals",data)
+        axios.post("https://react-spring-boot-clinical.herokuapp.com/api/clinicals",data)
         .then(res=>{
             //this.props.history.push('/confirmReservation/'+res.data.id)
         })
