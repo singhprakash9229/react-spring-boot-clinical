@@ -8,7 +8,7 @@ class Home extends React.Component{
     }
 
     componentWillMount(){
-         axios.get('http://localhost:8080/clinicalservices/api/patients').then(res=>{
+         axios.get('http://localhost:8080/api/patients').then(res=>{
             const patientData = res.data;
             this.setState({patientData})
         })

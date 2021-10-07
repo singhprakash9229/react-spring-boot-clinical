@@ -6,8 +6,8 @@ class CollectClinicals extends React.Component{
     state = {}
 
     componentWillMount(){
-        console.log("http://localhost:8080/clinicalservices/api/patients/"+this.props.match.params.patientId);
-        axios.get("http://localhost:8080/clinicalservices/api/patients/"+this.props.match.params.patientId)
+        console.log("http://localhost:8080/api/patients/"+this.props.match.params.patientId);
+        axios.get("http://localhost:8080/api/patients/"+this.props.match.params.patientId)
         .then(res=>{
             console.log(res.data);
             this.setState(res.data);
@@ -21,7 +21,7 @@ class CollectClinicals extends React.Component{
             componentName:this.componentName,
             componentValue:this.componentValue,
         }
-        axios.post("http://localhost:8080/clinicalservices/api/clinicals",data)
+        axios.post("http://localhost:8080/api/clinicals",data)
         .then(res=>{
             //this.props.history.push('/confirmReservation/'+res.data.id)
         })

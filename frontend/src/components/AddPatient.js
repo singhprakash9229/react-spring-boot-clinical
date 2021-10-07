@@ -13,7 +13,7 @@ class AddPatient extends React.Component{
             age:this.age
         }
         console.log(data);
-        axios.post("http://localhost:8080/clinicalservices/api/patients",data)
+        axios.post("http://localhost:8080/api/patients",data)
         .then(res=>{
           //  document.write("Patient Created Successfully!!");
         })
